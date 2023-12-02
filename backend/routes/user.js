@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const auth = require('../middleware/auth');
 const userCtrl = require('../controllers/user');
-
+/* A partir de async > Virer sur controllers/user.js */
 router.post('/signup', async (req, res) => {
     const { email, password } = req.body;
     const hashedPassword = await userCtrl.hashPassword(password);
